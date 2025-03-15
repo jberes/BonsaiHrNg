@@ -1,0 +1,25 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="row-layout group_2">
+      <h3 class="h3">
+        Org Chart
+      </h3>
+      <div class="row-layout group_3">
+        <igx-simple-combo type="border" [data]="bambooSalesPeople" valueKey="Name" displayKey="Name" (selectionChanging)="selectedReportsTo = $event.newValue" class="single-select-combo">
+          <label igxLabel>Select Manager</label>
+        </igx-simple-combo>
+        <igx-simple-combo type="border" [data]="bambooSalesPeople" valueKey="Name" displayKey="Name" (selectionChanging)="selectedReportsTo = $event.newValue" class="single-select-combo">
+          <label igxLabel>Levels Deep</label>
+        </igx-simple-combo>
+      </div>
+    </div>
+    <div class="row-layout group_4">
+      <div class="column-layout group_5">
+        <igx-input-group type="border" class="textarea">
+          <label igxLabel>Label/Placeholder</label>
+          <textarea igxInput [(ngModel)]="value"></textarea>
+        </igx-input-group>
+      </div>
+    </div>
+  </div>
+</div>

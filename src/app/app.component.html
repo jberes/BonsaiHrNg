@@ -1,0 +1,71 @@
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="260px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple [routerLink]="['/org-chart']">
+        <igx-icon class="icon">
+          account_circle
+        </igx-icon>
+        <span>Org Chart</span>
+      </div>
+      <div igxDrawerItem igxRipple [routerLink]="['/people-grid']">
+        <igx-icon class="icon">
+          group
+        </igx-icon>
+        <span>People</span>
+      </div>
+      <div igxDrawerItem igxRipple [routerLink]="['/reports']">
+        <igx-icon class="icon">
+          pie_chart
+        </igx-icon>
+        <span>Reports</span>
+      </div>
+      <div igxDrawerItem igxRipple [routerLink]="['/notes']">
+        <igx-icon class="icon">
+          description
+        </igx-icon>
+        <span>Notes</span>
+      </div>
+      <div class="column-layout group_1"></div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="column-layout group_2">
+    <igx-navbar class="navbar">
+      <igx-navbar-action>
+        <button igxRipple igxIconButton="flat" [igxToggleAction]="navDrawer">
+          <igx-icon>
+            menu
+          </igx-icon>
+        </button>
+      </igx-navbar-action>
+      <igx-navbar-title class="navbar-content">
+        <div class="row-layout group_3">
+          <img src="/assets/IG-Logo-Horiz.svg" class="image" />
+        </div>
+      </igx-navbar-title>
+      <igx-input-group type="border" class="input">
+        <igx-prefix>
+          <igx-icon class="icon_1">
+            search
+          </igx-icon>
+        </igx-prefix>
+        <input type="text" placeholder="Search" igxInput />
+      </igx-input-group>
+      <div class="row-layout group_4">
+        <div class="row-layout group_5">
+          <igx-icon class="icon_2">
+            inbox
+          </igx-icon>
+          <igx-badge value="11" class="badge"></igx-badge>
+        </div>
+        <div class="row-layout group_6">
+          <igx-icon class="icon_2">
+            help_outline
+          </igx-icon>
+        </div>
+      </div>
+    </igx-navbar>
+    <div class="view-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

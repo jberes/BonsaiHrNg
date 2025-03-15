@@ -1,0 +1,32 @@
+<div class="row-layout group">
+  <div class="column-layout group_1">
+    <div class="row-layout group_2">
+      <h3 class="h3">
+        People List
+      </h3>
+      <div class="row-layout group_3"></div>
+    </div>
+    <div class="row-layout group_4">
+      <div class="column-layout group_5">
+        <div class="column-layout group_6">
+          <igx-grid [data]="bambooSalesPeople" primaryKey="PersonID" rowSelection="single" [hideRowSelectors]="true" [allowFiltering]="true" filterMode="excelStyleFilter" width="100%" class="grid">
+            <igx-grid-toolbar>
+              <igx-grid-toolbar-actions>
+                <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+              </igx-grid-toolbar-actions>
+              <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+            </igx-grid-toolbar>
+            <igx-column field="PersonID" dataType="number" header="PersonID" width="153px" [hidden]="true" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+            <igx-column field="Photo" dataType="string" header="Photo" width="147px" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false">
+              <ng-template igxCell let-cell="cell">
+                <img [src]="cell.value" class="image" />
+              </ng-template>
+            </igx-column>
+            <igx-column field="Name" dataType="string" header="Name" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+            <igx-column field="ReportsTo" dataType="number" header="ReportsTo" [hidden]="true" [filterable]="true" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+          </igx-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
